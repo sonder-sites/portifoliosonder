@@ -20,3 +20,28 @@ $(document).ready(function() {
         }
     });
 });
+
+const frases = [
+"Criamos sites que vendem.",
+"Transformamos visitantes em clientes.",
+"Ajudamos pequenas empresas a crescer no digital."
+];
+
+let index = 0;
+
+setInterval(() => {
+
+const titulo = document.getElementById("changing-title");
+
+titulo.style.opacity = 0;
+
+setTimeout(() => {
+
+index = (index + 1) % frases.length;
+titulo.textContent = frases[index];
+
+titulo.style.opacity = 1;
+
+}, 400);
+
+}, 3000);
